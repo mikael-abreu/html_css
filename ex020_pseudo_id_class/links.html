@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*
+            #  = id
+            .  = class
+            :  = pseudo.class
+            :: = pseudo.element
+            >  = children
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        a:visited {
+            color: rgb(84, 228, 40);
+        }
+
+        a:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        .especial::before {
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: rgb(44, 15, 15);
+        }
+
+
+        .especial::after {
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: rgb(54, 25, 25);
+        }
+
+        .especial {
+            background-color: red;
+            color: white;
+        }
+
+        a {
+            color: rgb(223, 24, 24);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="http://youtube.com" target="_blank">Repositório github</a></li>
+        <li><a href="#" class="especial">Canal youtube</a></li>
+        <li><a href="#" class="especial">Site cursoemvideo</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        h1 {/* box-level - posso mudar p/ inline usando DISPLAY: INLINE;*/
+            background-color: grey;
+            height: 300px;
+            width: 300px;
+
+            border-width: 10px;
+            border-style: solid;
+            border-color: blue;
+
+            border: 10px solid blue;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            padding: 10px 10px 10px 20px; /*sentido horário */
+
+            padding: 20px; /* todas ficam com 20px*/
+
+            padding: 15px 30px;/*cima e baixo c/ 15px e laterais c/ 30px*/
+
+            /*margin-top: 10px;
+              margin-right: 10px;
+              margin-bottom: 10px;
+              margin-left: 10px;  */
+
+            margin: 30px auto 30px auto;/*shorthand*/
+
+            /* margin: auto; para centralizar!!!*/
+
+            /*outline-width: 5px;
+              outline-style: dashed;
+              outline-color: red;  */
+
+            outline: 10px solid yellow; /*shorthand*/
+
+
+        }
+
+        a { /* inline-level - posso mudar p/ box-level usando DISPLAY: BLOCK;*/
+            /*ou ainda usar DISPLAY: INLINE-BLOCK
+            que ficara inline c/ propriedades box*/
+
+         /*   border-width: 5px;
+              border-color: red;
+              border-style: solid; */
+
+            border: 10px solid red; /*shorthand*/
+
+          /*  padding-top: 10px;
+              padding-right: 10px;
+              padding-bottom: 10px;
+              padding-left: 10px;  */
+
+              padding: 10px; /*shorthand*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos são exemplos de box-level, mas os <a href="#">links são exemplos de inline-level</a>. Vamos ver como isso tudo funciona.</p>
+</body>
+</html>
