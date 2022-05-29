@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 5vw;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: grey;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            margin: auto;
+            position: relative;
+        }
+
+        tbody > tr:nth-child(even){/* tbm pode ser 2n ou 2n-1*/
+            background-color: rgb(255, 255, 255);
+        }
+
+        tbody > tr:nth-child(odd){/*odd-> par, even-> ímpar*/
+            background-color: lightgray;
+        }
+
+        thead > tr > th { /* P/ DEIXAR OCABEÇALHO FIXO*/
+            position: sticky;
+            top: 0;
+            background-color: rgb(27, 27, 27);   
+        }
+
+
+        td, th {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        thead, tfoot {
+            background-color: rgb(37, 37, 37);
+            color: white;
+        }
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+        CAPTION                 <- legenda da tabela
+            THEAD               <- cabeçalho
+                TR, TD, TH
+            TBODY               <- corpo  
+                TR, TD, TH
+            TFOOT               <- rodapé 
+                TR, TD, TH
+    -->
+    <table>
+        <caption>
+            População das Unidades Federativas
+        </caption>
+        <thead>
+            <tr><!--scope=col diz que o "th" se refere a coluna-->
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46 649 132</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 411 923</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 463 349</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 985 284</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 597 484</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 466 630</td>
+            </tr>
+            <tr>
+                <td> Pernambuco</td>
+                <td class="num">9 674 793</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 240 580</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 777 124</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 338 473</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 58</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7 153 262</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4 269 995</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4 108 508</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4 059 905</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 567 234</td>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 560 903</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3 365 351</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 289 290</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">3 094 325</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr><!--scope=row diz que "th se refere a linha"-->
+                <th scope="row">Total de habitantes</th>
+                <td class="num"><strong>00000</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui iusto repellat ipsam inventore commodi ipsa porro enim rerum. Minima similique tenetur sed! Perferendis tenetur, repellendus voluptatum rerum in laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati, corporis, aperiam unde, voluptates modi aliquid dolor ipsam quibusdam nulla libero? Nemo, laudantium. Rerum minus accusantium nesciunt pariatur, ab odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facilis magni molestiae ab unde incidunt repellat placeat! Asperiores iure minima eligendi, eum dolore, qui soluta ipsam, vero quia itaque in.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui iusto repellat ipsam inventore commodi ipsa porro enim rerum. Minima similique tenetur sed! Perferendis tenetur, repellendus voluptatum rerum in laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati, corporis, aperiam unde, voluptates modi aliquid dolor ipsam quibusdam nulla libero? Nemo, laudantium. Rerum minus accusantium nesciunt pariatur, ab odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facilis magni molestiae ab unde incidunt repellat placeat! Asperiores iure minima eligendi, eum dolore, qui soluta ipsam, vero quia itaque in.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui iusto repellat ipsam inventore commodi ipsa porro enim rerum. Minima similique tenetur sed! Perferendis tenetur, repellendus voluptatum rerum in laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati, corporis, aperiam unde, voluptates modi aliquid dolor ipsam quibusdam nulla libero? Nemo, laudantium. Rerum minus accusantium nesciunt pariatur, ab odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facilis magni molestiae ab unde incidunt repellat placeat! Asperiores iure minima eligendi, eum dolore, qui soluta ipsam, vero quia itaque in.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui iusto repellat ipsam inventore commodi ipsa porro enim rerum. Minima similique tenetur sed! Perferendis tenetur, repellendus voluptatum rerum in laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati, corporis, aperiam unde, voluptates modi aliquid dolor ipsam quibusdam nulla libero? Nemo, laudantium. Rerum minus accusantium nesciunt pariatur, ab odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facilis magni molestiae ab unde incidunt repellat placeat! Asperiores iure minima eligendi, eum dolore, qui soluta ipsam, vero quia itaque in.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui iusto repellat ipsam inventore commodi ipsa porro enim rerum. Minima similique tenetur sed! Perferendis tenetur, repellendus voluptatum rerum in laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati, corporis, aperiam unde, voluptates modi aliquid dolor ipsam quibusdam nulla libero? Nemo, laudantium. Rerum minus accusantium nesciunt pariatur, ab odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facilis magni molestiae ab unde incidunt repellat placeat! Asperiores iure minima eligendi, eum dolore, qui soluta ipsam, vero quia itaque in.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui iusto repellat ipsam inventore commodi ipsa porro enim rerum. Minima similique tenetur sed! Perferendis tenetur, repellendus voluptatum rerum in laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati, corporis, aperiam unde, voluptates modi aliquid dolor ipsam quibusdam nulla libero? Nemo, laudantium. Rerum minus accusantium nesciunt pariatur, ab odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facilis magni molestiae ab unde incidunt repellat placeat! Asperiores iure minima eligendi, eum dolore, qui soluta ipsam, vero quia itaque in.</p>
+</body>
+</html>
